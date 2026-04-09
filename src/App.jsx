@@ -117,7 +117,7 @@ export default function App() {
     const modelName = import.meta.env.VITE_MODEL_NAME || "Qwen/Qwen2.5-72B-Instruct";
 
     try {
-      const response = await fetch('/api/hf/v1/chat/completions', {
+      const response = await fetch('https://router.huggingface.co/v1/chat/completions', {
         method: "POST",
         headers: {
           Authorization: `Bearer ${hfToken}`,
@@ -199,7 +199,7 @@ export default function App() {
     
     try {
       const response = await fetch(
-        "/api/hf/hf-inference/models/black-forest-labs/FLUX.1-schnell",
+        "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell",
         {
           headers: {
             Authorization: `Bearer ${hfToken}`,
